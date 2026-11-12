@@ -1,0 +1,43 @@
+{
+    "meta": {
+        "title": "Luis Crisanto | Lux.dev",
+        "description": "Portfolio of Luis Crisanto, Full Stack developer: software and computer vision projects."
+    },
+    "a11y": {
+        "skip": "Skip to content"
+    },
+    "nav": {
+        "label": "Main",
+        "homeAria": "Lux.dev, go to home",
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact"
+    },
+    "lang": {
+        "label": "Language"
+    },
+    "status": {
+        "implemented": "Implemented",
+        "inDevelopment": "In development"
+    },
+    "pages": {
+        "wip": "Section under construction.",
+        "stack": "Technologies",
+        "viewCase": "View case",
+        "repo": "Repository",
+        "live": "View live",
+        "links": "Links",
+        "contactForm": "The form will be enabled once it is connected to a real delivery service.",
+        "notFound": {
+            "title": "Page not found",
+            "text": "This route does not exist in the Lux.dev universe.",
+            "back": "Back to home"
+        }
+    },
+    "footer": {
+        "designBy": "Graphic design",
+        "creditAria": "Lilian Gutiérrez, graphic design (opens in a new tab)",
+        "rights": "© 2026 LC.dev"
+    }
+}

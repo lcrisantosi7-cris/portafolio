@@ -12,7 +12,10 @@
         "home": "Home",
         "about": "About",
         "projects": "Projects",
-        "contact": "Contact"
+        "contact": "Contact",
+        "contactCta": "Let's talk",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
     },
     "lang": {
         "label": "Language"
@@ -20,6 +23,50 @@
     "status": {
         "implemented": "Implemented",
         "inDevelopment": "In development"
+    },
+    "hero": {
+        "eyebrow": "Full Stack Developer · Peru",
+        "tagline": "I build software end to end: interface, API and data. Right now I'm exploring computer vision and cloud architecture.",
+        "ctaProject": "See RetailVision",
+        "ctaContact": "Let's talk",
+        "scroll": "Explore",
+        "photoAlt": "Portrait of Luis Crisanto",
+        "orbitAria": "Map of my areas: backend, frontend, computer vision and cloud (learning).",
+        "nodes": {
+            "backend": "Backend",
+            "frontend": "Frontend",
+            "vision": "Computer vision",
+            "cloud": "Cloud · learning"
+        }
+    },
+    "manifesto": {
+        "eyebrow": "Manifesto",
+        "title": "Expert in nothing.",
+        "p1": "Technology changes faster than anyone can master it.",
+        "p2": "So I don't pretend to know it all: I protect my curiosity and adapt.",
+        "p3": "Every project is an excuse to learn something new and build a better solution."
+    },
+    "star": {
+        "eyebrow": "Star project · Thesis · 2026",
+        "problemLabel": "Problem",
+        "problem": "A business doesn't know precisely how people move inside its store.",
+        "solutionLabel": "Solution",
+        "solution": "A system that detects and tracks people by zone from one or several cameras using YOLOv8, and turns it into live KPIs, a heat map, dwell time per zone and exportable reports.",
+        "cta": "View the case",
+        "repo": "Code on GitHub",
+        "shotAlt": "RetailVision Analytics monitoring dashboard with camera feed, real-time KPIs, zone distribution and heat map."
+    },
+    "worlds": {
+        "eyebrow": "Beyond the star project",
+        "title": "Other worlds",
+        "all": "See all projects",
+        "alfapet": "Clinical management for a veterinary clinic: patients, appointments, history, inventory and sales, with role-based permissions and an RLS-protected database.",
+        "educore": "Academic management for schools: enrollment, attendance, grades and report cards, built with PHP and PostgreSQL."
+    },
+    "cta": {
+        "eyebrow": "Contact",
+        "title": "Let's talk",
+        "text": "If something you saw interests you, let's chat."
     },
     "pages": {
         "wip": "Section under construction.",

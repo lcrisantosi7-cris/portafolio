@@ -1,14 +1,26 @@
-import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
 import PageMeta from '../components/PageMeta'
+import Hero from '../components/home/Hero'
+import Manifesto from '../components/home/Manifesto'
+import StarProject from '../components/home/StarProject'
+import OtherWorlds from '../components/home/OtherWorlds'
+import ContactCta from '../components/home/ContactCta'
+import { ScrollTrigger } from '../lib/gsap'
 
 export default function Home() {
-    const { t } = useTranslation()
+    // Las fuentes cambian la altura de las secciones: recalcular los triggers
+    useEffect(() => {
+        document.fonts?.ready.then(() => ScrollTrigger.refresh())
+    }, [])
 
     return (
-        <section className="flex min-h-svh flex-col items-center justify-center px-6 text-center">
+        <>
             <PageMeta />
-            <h1 className="text-5xl font-bold tracking-tight sm:text-7xl">Luis Crisanto</h1>
-            <p className="mt-4 text-cream-100/70">{t('pages.wip')}</p>
-        </section>
+            <Hero />
+            <Manifesto />
+            <StarProject />
+            <OtherWorlds />
+            <ContactCta />
+        </>
     )
 }

@@ -7,7 +7,7 @@ export default function LanguageToggle() {
     const current = i18n.resolvedLanguage
 
     return (
-        <div role="group" aria-label={t('lang.label')} className="flex items-center gap-1 text-sm">
+        <div role="group" aria-label={t('lang.label')} className="flex items-center rounded-full p-0.5 ring-1 ring-white/10">
             {LANGS.map((lng) => (
                 <button
                     key={lng}
@@ -15,7 +15,7 @@ export default function LanguageToggle() {
                     lang={lng}
                     aria-pressed={current === lng}
                     onClick={() => i18n.changeLanguage(lng)}
-                    className={`rounded px-2 py-1 transition-colors ${current === lng ? 'bg-flame-500 text-navy-950' : 'text-cream-100/70 hover:text-cream-100'
+                    className={`rounded-full px-2.5 py-1 font-mono text-xs transition-colors ${current === lng ? 'bg-white/15 text-cream-100' : 'text-cream-100/55 hover:text-cream-100'
                         }`}
                 >
                     {lng.toUpperCase()}

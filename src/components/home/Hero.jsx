@@ -5,15 +5,20 @@ import LinkButton from '../ui/LinkButton'
 import Starfield from './Starfield'
 import OrbitDiagram from './OrbitDiagram'
 
-const PHOTO_SOURCES = ['/assets/images/luis-cutout.png', '/assets/images/luis-original.jpg']
-const FADE_MASK = 'linear-gradient(to top, transparent 0%, #000 22%)'
+const PHOTO_SOURCES = [
+    '/assets/images/luis-cutout.webp',
+    '/assets/images/luis-cutout.png',
+    '/assets/images/luis-original.jpg',
+]
+const FADE_MASK = 'linear-gradient(to top, transparent 0%, #000 16%)'
+const RIM = 'drop-shadow(0 0 1px rgba(255,170,90,0.85))'
 
 export default function Hero() {
     const { t } = useTranslation()
     const root = useRef(null)
     const [photoIndex, setPhotoIndex] = useState(0)
     const photoSrc = PHOTO_SOURCES[photoIndex]
-    const isCutout = photoIndex === 0
+    const isFallback = photoIndex === PHOTO_SOURCES.length - 1
 
     useGSAP(
         () => {
@@ -89,7 +94,7 @@ export default function Hero() {
         <section
             ref={root}
             aria-labelledby="hero-title"
-            className="relative isolate h-svh min-h-[640px] overflow-hidden bg-void-950"
+            className="hero-stage relative isolate h-svh min-h-[640px] overflow-hidden bg-void-950"
         >
             {/* Fondo: nebulosa + estrellas */}
             <div
@@ -126,18 +131,21 @@ export default function Hero() {
             {/* Órbitas: mapa de mis áreas */}
             <div
                 data-scroll="orbit"
-                className="pointer-events-none absolute inset-0 z-[3] grid place-items-center pt-[10svh]"
+                className="hero-orbit pointer-events-none absolute inset-0 z-[3] grid place-items-center"
             >
-                <div data-depth="12" className="w-[min(125vmin,1050px)]">
+                <div data-depth="12" className="hero-orbit-box">
                     <OrbitDiagram className="h-auto w-full overflow-visible" />
                 </div>
             </div>
+
+            {/* Sombra suave para que el texto se lea sobre los anillos */}
+            <div aria-hidden="true" className="hero-shade" />
 
             {/* Nombre: queda detrás de la foto */}
             <h1
                 id="hero-title"
                 data-scroll="name"
-                className="pointer-events-none absolute inset-x-0 top-[12svh] z-[4] flex select-none flex-col items-center font-display font-condensed font-extrabold uppercase leading-[0.9] tracking-[-0.01em] text-[length:clamp(5rem,21vw,12rem)] md:top-[15svh] md:flex-row md:justify-center md:gap-[0.22em] md:text-[length:clamp(5rem,12.6vw,15rem)]"
+                className="hero-name pointer-events-none select-none font-display font-condensed font-extrabold uppercase tracking-[-0.01em]"
             >
                 <span className="block overflow-hidden py-[0.03em]">
                     <span data-hero="name-line" className="block text-flame-gradient">
@@ -158,24 +166,27 @@ export default function Hero() {
                 className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] flex justify-center"
             >
                 <div data-depth="-14" className="relative">
+                    <div
+                        aria-hidden="true"
+                        className="absolute left-1/2 top-[14%] -z-10 aspect-square w-[135%] -translate-x-1/2 rounded-full"
+                        style={{
+                            background:
+                                'radial-gradient(circle, rgba(255,106,19,0.3) 0%, rgba(255,106,19,0.1) 40%, transparent 68%)',
+                        }}
+                    />
                     {photoSrc && (
                         <img
                             src={photoSrc}
                             alt={t('hero.photoAlt')}
                             fetchPriority="high"
                             decoding="async"
+                            data-fallback={isFallback ? '' : undefined}
                             onError={() => setPhotoIndex((i) => i + 1)}
-                            className={
-                                isCutout
-                                    ? 'block h-[66svh] w-auto max-w-none md:h-[84svh]'
-                                    : 'block h-[60svh] w-auto max-w-none rounded-t-[999px] object-cover md:h-[76svh]'
-                            }
+                            className="hero-photo-img"
                             style={{
                                 maskImage: FADE_MASK,
                                 WebkitMaskImage: FADE_MASK,
-                                filter: isCutout
-                                    ? 'drop-shadow(0 0 1.5px rgba(255,170,90,0.9)) drop-shadow(0 0 70px rgba(255,106,19,0.3))'
-                                    : undefined,
+                                filter: isFallback ? undefined : RIM,
                             }}
                         />
                     )}
@@ -191,7 +202,7 @@ export default function Hero() {
             {/* Texto y llamadas a la acción */}
             <div
                 data-scroll="copy"
-                className="absolute inset-x-0 bottom-0 z-[6] bg-gradient-to-t from-void-950/90 via-void-950/55 to-transparent px-5 pb-8 pt-24 md:bg-none md:px-12 md:pb-14 md:pt-0"
+                className="absolute inset-x-0 bottom-0 z-[6] bg-gradient-to-t from-void-950 via-void-950/70 to-transparent px-5 pb-8 pt-28 md:bg-none md:px-12 md:pb-14 md:pt-0"
             >
                 <div className="mx-auto flex max-w-[1500px] flex-col gap-6 md:flex-row md:items-end md:justify-between">
                     <div className="max-w-md">
@@ -201,13 +212,13 @@ export default function Hero() {
                         >
                             {t('hero.eyebrow')}
                         </p>
-                        <p data-hero="fade" className="mt-3 text-lg leading-snug text-cream-100/85 md:text-xl">
+                        <p data-hero="fade" className="mt-3 text-lg leading-snug text-cream-100/90 md:text-xl">
                             {t('hero.tagline')}
                         </p>
                         <div data-hero="fade" className="mt-6 flex flex-wrap gap-3">
                             <LinkButton to="/projects/retailvision">{t('hero.ctaProject')}</LinkButton>
-                            <LinkButton to="/contact" variant="ghost">
-                                {t('hero.ctaContact')}
+                            <LinkButton to="/about" variant="ghost">
+                                {t('hero.ctaAbout')}
                             </LinkButton>
                         </div>
                     </div>

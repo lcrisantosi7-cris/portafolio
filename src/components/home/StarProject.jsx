@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react'
+import { useRef } from 'react'
+import { getProjectImages } from '../../lib/projectImages'
 import { useTranslation } from 'react-i18next'
 import { gsap, useGSAP } from '../../lib/gsap'
 import useReveal from '../../hooks/useReveal'
@@ -13,7 +14,7 @@ export default function StarProject() {
     const { t } = useTranslation()
     const root = useRef(null)
     const reduced = useReducedMotion()
-    const [shotOk, setShotOk] = useState(true)
+    const shot = getProjectImages('retailvision')[0]
 
     useReveal(root)
 
@@ -133,14 +134,13 @@ export default function StarProject() {
                         </g>
                     </svg>
 
-                    {shotOk && (
+                    {shot && (
                         <img
                             data-star-shot
-                            src="/assets/images/retailvision/Dashboard.webp"
+                            src={shot.url}
                             alt={t('star.shotAlt')}
                             loading="lazy"
                             decoding="async"
-                            onError={() => setShotOk(false)}
                             className="absolute -bottom-4 right-[-4%] w-[78%] rounded-xl ring-1 ring-white/15 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.8)]"
                         />
                     )}

@@ -1,0 +1,181 @@
+{
+    "about": {
+        "eyebrow": "Sobre mí",
+        "title": "Cómo se conectan las piezas",
+        "lead": "Desarrollador Full Stack con curiosidad por entender un sistema completo.",
+        "p1": "Soy Luis Crisanto. Trabajo en proyectos que combinan interfaz, API REST y bases de datos, y me interesa entender cómo se conectan esas piezas para que un sistema crezca sin romperse.",
+        "p2": "Estudio Ingeniería de Sistemas en la Universidad César Vallejo. Además del desarrollo web me atraen la infraestructura, las redes, el IoT y la visión por computadora, que es el terreno de mi proyecto de tesis.",
+        "p3": "Mi siguiente paso es la arquitectura de soluciones y la nube. Hoy estoy aprendiendo AWS: todavía no tengo certificaciones y lo presento tal cual, como un área de aprendizaje.",
+        "photoAlt": "Retrato de Luis Crisanto",
+        "facts": {
+            "studiesLabel": "Estudios",
+            "studies": "Ingeniería de Sistemas, Universidad César Vallejo (en curso)",
+            "focusLabel": "Foco",
+            "focus": "Full Stack y visión por computadora",
+            "learningLabel": "Aprendiendo",
+            "learning": "AWS y arquitectura cloud",
+            "countryLabel": "País",
+            "country": "Perú"
+        },
+        "constellation": {
+            "eyebrow": "Especialidades",
+            "title": "Mapa de habilidades",
+            "text": "Cada estrella es una tecnología. Cuanto más cerca del centro, más sólido es mi conocimiento. Las líneas muestran qué se conecta con qué.",
+            "aria": "Mapa interactivo de tecnologías agrupadas por nivel",
+            "hint": "Pasa el cursor o enfoca una estrella para ver dónde la usé.",
+            "usedIn": "Usado en",
+            "noProject": "Todavía sin proyecto asociado en este portafolio.",
+            "learningNote": "Es mi área de aprendizaje actual."
+        },
+        "tiers": {
+            "core": {
+                "name": "Núcleo",
+                "desc": "Conocimientos sólidos: la base sobre la que construyo."
+            },
+            "proficient": {
+                "name": "Dominio",
+                "desc": "Las bases de la interfaz web."
+            },
+            "inProjects": {
+                "name": "Usado en proyectos",
+                "desc": "Herramientas que ya apliqué en los proyectos de este portafolio."
+            },
+            "exploring": {
+                "name": "Exploración",
+                "desc": "Tecnologías que conozco y sigo explorando."
+            },
+            "learning": {
+                "name": "En aprendizaje",
+                "desc": "Mi siguiente paso: nube y arquitectura de soluciones. Sin certificaciones por ahora."
+            }
+        },
+        "education": {
+            "eyebrow": "Formación y trayectoria",
+            "title": "Aprender construyendo",
+            "studyTitle": "Formación",
+            "buildTitle": "Proyectos construidos",
+            "ucv": {
+                "title": "Universidad César Vallejo",
+                "text": "Ingeniería de Sistemas.",
+                "status": "En curso"
+            },
+            "courses": {
+                "title": "Formación complementaria",
+                "text": "Más de 37 cursos relacionados con mi formación académica y profesional.",
+                "status": ""
+            },
+            "aws": {
+                "title": "Camino hacia la nube",
+                "text": "Exploro AWS y los fundamentos de servicios e infraestructura cloud. Todavía sin certificaciones.",
+                "status": "En aprendizaje"
+            }
+        }
+    },
+    "projectsIndex": {
+        "eyebrow": "Proyectos",
+        "title": "Exploración de proyectos",
+        "text": "Tres proyectos con caso de estudio y otros en el taller. Cada caso muestra el problema, la solución y cómo está construido.",
+        "starLabel": "Proyecto estrella",
+        "viewCase": "Ver caso de estudio",
+        "workshopTitle": "En el taller",
+        "noDescription": "Proyecto en desarrollo. Pronto más detalles.",
+        "repo": "Ver repositorio",
+        "summary": {
+            "retailvision": "Analítica de afluencia en tiempo real: detecta personas por zonas desde cámaras con YOLOv8 y las convierte en indicadores, mapa de calor y reportes.",
+            "alfapet": "Gestión clínica para una veterinaria: pacientes, citas, historial, inventario y ventas, con permisos por rol y base de datos protegida con RLS.",
+            "educore": "Gestión académica para colegios: matrículas, asistencia, calificaciones y boletas de notas, con PHP y PostgreSQL.",
+            "plantmilk": "Plataforma de comercio electrónico de lácteos y bebidas vegetales."
+        }
+    },
+    "caseUi": {
+        "problem": "Problema",
+        "solution": "Solución",
+        "pipeline": "Del fotograma al dato",
+        "why": "Por qué estas decisiones",
+        "how": "Cómo funciona",
+        "gallery": "Capturas",
+        "result": "Resultado",
+        "learned": "Aprendizaje",
+        "live": "Ver en producción",
+        "repo": "Código en GitHub",
+        "next": "Siguiente proyecto",
+        "all": "Todos los proyectos"
+    },
+    "cases": {
+        "retailvision": {
+            "tagline": "Analítica de afluencia en tiempo real a partir de cámaras.",
+            "problem": "Muchos locales no tienen forma de saber cuánta gente entra ni por dónde se mueve dentro. Sin ese dato, decisiones como dónde colocar un producto o una promoción se toman a ojo.",
+            "solution": "RetailVision Analytics detecta y rastrea personas por zonas con YOLOv8 desde una o varias cámaras, y convierte el video en información útil: indicadores en vivo, mapa de calor, permanencia por zona y reportes exportables.",
+            "pipeline": [
+                {
+                    "title": "Cámara",
+                    "text": "Webcam o RTSP"
+                },
+                {
+                    "title": "Detección",
+                    "text": "YOLOv8 + OpenCV"
+                },
+                {
+                    "title": "API",
+                    "text": "FastAPI"
+                },
+                {
+                    "title": "Tiempo real",
+                    "text": "WebSocket + MJPEG"
+                },
+                {
+                    "title": "Panel",
+                    "text": "React + Recharts"
+                }
+            ],
+            "why": "YOLOv8 y OpenCV permiten detectar y seguir personas sobre video en tiempo real. FastAPI expone los datos por API y WebSocket, y React los presenta en un panel que se actualiza al instante.",
+            "how": [
+                "Captura de video desde webcam o cámaras RTSP, con varias cámaras configurables.",
+                "Detección y seguimiento de personas por zonas con YOLOv8 y OpenCV, en Python.",
+                "Servidor FastAPI que expone una API y envía datos en vivo por WebSocket, además de un stream MJPEG del video procesado.",
+                "Panel en React con vistas de Monitor, Análisis, Reportes y Video, gráficos con Recharts y mapa de calor.",
+                "Métricas de evaluación del modelo (precisión, recall y F1), subida de video para análisis y reporte exportable a PDF."
+            ],
+            "result": "Sistema funcional de extremo a extremo, ejecutándose en entorno local, con las vistas y los reportes descritos. Todavía no está desplegado y los resultados medidos se publicarán más adelante.",
+            "learned": "Integrar visión por computadora con una API en tiempo real y una interfaz web: del fotograma al dato, y del dato a una decisión.",
+            "shots": {
+                "dashboard": "Panel de monitoreo",
+                "analisis": "Análisis",
+                "reporte": "Reporte",
+                "reporte_recomendaciones": "Reporte con recomendaciones",
+                "video_analisis": "Análisis de video",
+                "multi_camara": "Multicámara"
+            }
+        },
+        "alfapet": {
+            "tagline": "Gestión clínica para una veterinaria.",
+            "problem": "Una veterinaria necesita llevar pacientes, citas, historial clínico, inventario y ventas, con distintas personas accediendo a distinta información.",
+            "solution": "Un sistema web interno con módulos clínicos y de gestión, tres roles con permisos distintos y una base de datos que aplica esas reglas desde el propio motor.",
+            "why": "Supabase y PostgreSQL con políticas RLS llevan el control de acceso a la base de datos, no solo a la interfaz. TypeScript y Zod validan los datos, y React Router con SSR renderiza en el servidor.",
+            "how": [
+                "Frontend en React 19 y TypeScript con React Router (SSR), Vite y Tailwind CSS.",
+                "Autenticación con Supabase Auth y tres roles con permisos diferenciados.",
+                "PostgreSQL con políticas RLS, funciones RPC y triggers de auditoría.",
+                "Validación de datos con Zod y pruebas con Vitest y pgTAP.",
+                "Dockerfile incluido y despliegue en Vercel."
+            ],
+            "result": "Sistema desplegado y en funcionamiento en alfapet.vercel.app. El acceso es solo para usuarios registrados, por eso no hay demo pública. Se evaluó con el modelo de calidad ISO 25010 como marco de referencia, sin que eso constituya una certificación.",
+            "learned": "Diseñar seguridad por capas, con permisos reales en la base de datos, y sostener un proyecto con pruebas y auditoría."
+        },
+        "educore": {
+            "tagline": "Gestión académica para colegios.",
+            "problem": "Un colegio debe administrar matrículas, asistencia, calificaciones y boletas, con distintos roles trabajando sobre los mismos datos.",
+            "solution": "EduCore, un sistema web con tres roles que cubre matrículas, asistencia, calificaciones y generación de boletas de notas.",
+            "why": "PHP nativo con estructura MVC y PostgreSQL alojado en Supabase, con JavaScript vanilla en el cliente: una base simple, ejecutable en XAMPP y sin depender de un framework.",
+            "how": [
+                "Backend en PHP 8 nativo con carpetas organizadas en MVC.",
+                "Base de datos PostgreSQL alojada en Supabase.",
+                "Interfaz con HTML, CSS y JavaScript vanilla.",
+                "Tres roles de usuario con módulos de matrículas, asistencia, calificaciones y boletas.",
+                "Instalación local sobre XAMPP."
+            ],
+            "result": "Sistema funcional en entorno local. No está desplegado.",
+            "learned": "Estructurar un backend sin framework, modelar datos académicos en SQL y separar responsabilidades por roles."
+        }
+    }
+}

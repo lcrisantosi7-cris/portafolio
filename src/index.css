@@ -114,3 +114,90 @@
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .9 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
   }
 }
+
+/* ───────── Hero: escenario con unidades de contenedor ───────── */
+.hero-stage {
+  container-type: size;
+}
+
+/* Vertical (móvil): nombre apilado */
+.hero-name {
+  position: absolute;
+  inset-inline: 0;
+  top: 12cqh;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: min(21cqw, 12.5cqh);
+  line-height: 0.9;
+}
+
+.hero-photo-img {
+  display: block;
+  height: 73cqh;
+  width: auto;
+  max-width: none;
+}
+
+.hero-photo-img[data-fallback] {
+  height: 62cqh;
+  border-radius: 999px 999px 0 0;
+  object-fit: cover;
+}
+
+.hero-orbit {
+  padding-top: 12cqh;
+}
+
+.hero-orbit-box {
+  width: min(100cqw, 130cqh);
+}
+
+.hero-shade {
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 4;
+  width: 46cqw;
+  height: 62cqh;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at 0% 100%,
+    rgba(3, 6, 15, 0.88) 0%,
+    rgba(3, 6, 15, 0.6) 38%,
+    transparent 72%
+  );
+}
+
+.orbit-label {
+  display: none;
+}
+
+/* Horizontal (escritorio): nombre en una línea, cabeza solo roza las letras */
+@container (min-aspect-ratio: 1/1) {
+  .hero-name {
+    top: 13.5cqh;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.22em;
+    font-size: min(13cqw, 24cqh);
+  }
+
+  .hero-photo-img {
+    height: 70cqh;
+  }
+
+  .hero-photo-img[data-fallback] {
+    height: 66cqh;
+  }
+
+  .hero-shade {
+    display: block;
+  }
+
+  .orbit-label {
+    display: inline;
+  }
+}

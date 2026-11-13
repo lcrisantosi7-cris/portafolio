@@ -3,6 +3,13 @@ export const STATUS = {
     IN_DEVELOPMENT: 'inDevelopment',
 }
 
+const PLANET = {
+    retailvision:
+        'radial-gradient(circle at 32% 28%, #ffe2b8 0%, #ffa24a 14%, #ff6a13 34%, #b53209 58%, #3a1019 80%, #0a1226 100%)',
+    alfapet: 'radial-gradient(circle at 30% 30%, #cfe0ff 0%, #6d97e6 24%, #1d4f94 55%, #071a33 100%)',
+    educore: 'radial-gradient(circle at 30% 30%, #fff3dc 0%, #e8cfa0 24%, #a8845a 55%, #2a1d14 100%)',
+}
+
 export const projects = [
     {
         slug: 'retailvision',
@@ -11,6 +18,8 @@ export const projects = [
         tier: 'star',
         status: STATUS.IMPLEMENTED,
         caseStudy: true,
+        diagram: 'pipeline',
+        planet: PLANET.retailvision,
         stack: ['Python', 'FastAPI', 'YOLOv8', 'OpenCV', 'React', 'Vite', 'Recharts'],
         repoUrl: 'https://github.com/lcrisantosi7-cris/retailvision-analytics',
         deployUrl: null,
@@ -22,6 +31,7 @@ export const projects = [
         tier: 'featured',
         status: STATUS.IMPLEMENTED,
         caseStudy: true,
+        planet: PLANET.alfapet,
         stack: ['React', 'TypeScript', 'React Router', 'Vite', 'Tailwind CSS', 'Supabase', 'PostgreSQL', 'Zod'],
         repoUrl: 'https://github.com/lcrisantosi7-cris/AlfaPet',
         deployUrl: 'https://alfapet.vercel.app',
@@ -33,6 +43,7 @@ export const projects = [
         tier: 'featured',
         status: STATUS.IMPLEMENTED,
         caseStudy: true,
+        planet: PLANET.educore,
         stack: ['PHP', 'PostgreSQL', 'Supabase', 'JavaScript'],
         repoUrl: 'https://github.com/lcrisantosi7-cris/Sistema-Gestion-Escolar',
         deployUrl: null,

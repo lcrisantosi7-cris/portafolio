@@ -1,181 +1,90 @@
 {
-    "about": {
-        "eyebrow": "About",
-        "title": "How the pieces connect",
-        "lead": "Full Stack developer curious about understanding a whole system.",
-        "p1": "I'm Luis Crisanto. I work on projects that combine interface, REST APIs and databases, and I care about understanding how those pieces connect so a system can grow without breaking.",
-        "p2": "I study Systems Engineering at Universidad César Vallejo. Beyond web development I'm drawn to infrastructure, networking, IoT and computer vision, which is the ground of my thesis project.",
-        "p3": "My next step is solutions architecture and the cloud. I'm currently learning AWS: I don't hold certifications yet and I present it as it is, an area of learning.",
+    "meta": {
+        "title": "Luis Crisanto | Lux.dev",
+        "description": "Portfolio of Luis Crisanto, Full Stack developer: software and computer vision projects."
+    },
+    "a11y": {
+        "skip": "Skip to content"
+    },
+    "nav": {
+        "label": "Main",
+        "homeAria": "Lux.dev, go to home",
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
+        "contactCta": "Let's talk",
+        "openMenu": "Open menu",
+        "closeMenu": "Close menu"
+    },
+    "lang": {
+        "label": "Language"
+    },
+    "status": {
+        "implemented": "Implemented",
+        "inDevelopment": "In development"
+    },
+    "hero": {
+        "eyebrow": "Full Stack Developer · Peru",
+        "tagline": "I build software end to end: interface, API and data. Right now I'm exploring computer vision and cloud architecture.",
+        "ctaProject": "See RetailVision",
+        "ctaAbout": "About me",
+        "scroll": "Explore",
         "photoAlt": "Portrait of Luis Crisanto",
-        "facts": {
-            "studiesLabel": "Studies",
-            "studies": "Systems Engineering, Universidad César Vallejo (in progress)",
-            "focusLabel": "Focus",
-            "focus": "Full Stack and computer vision",
-            "learningLabel": "Learning",
-            "learning": "AWS and cloud architecture",
-            "countryLabel": "Country",
-            "country": "Peru"
-        },
-        "constellation": {
-            "eyebrow": "Specialties",
-            "title": "Skills map",
-            "text": "Each star is a technology. The closer to the center, the more solid my knowledge. Lines show what connects to what.",
-            "aria": "Interactive map of technologies grouped by level",
-            "hint": "Hover or focus a star to see where I used it.",
-            "usedIn": "Used in",
-            "noProject": "No related project in this portfolio yet.",
-            "learningNote": "This is my current learning area."
-        },
-        "tiers": {
-            "core": {
-                "name": "Core",
-                "desc": "Solid knowledge: the base I build on."
-            },
-            "proficient": {
-                "name": "Proficient",
-                "desc": "The foundations of the web interface."
-            },
-            "inProjects": {
-                "name": "Used in projects",
-                "desc": "Tools I already applied in this portfolio's projects."
-            },
-            "exploring": {
-                "name": "Exploring",
-                "desc": "Technologies I know and keep exploring."
-            },
-            "learning": {
-                "name": "Learning",
-                "desc": "My next step: cloud and solutions architecture. No certifications for now."
-            }
-        },
-        "education": {
-            "eyebrow": "Education and path",
-            "title": "Learning by building",
-            "studyTitle": "Education",
-            "buildTitle": "Projects built",
-            "ucv": {
-                "title": "Universidad César Vallejo",
-                "text": "Systems Engineering.",
-                "status": "In progress"
-            },
-            "courses": {
-                "title": "Complementary training",
-                "text": "More than 37 courses related to my academic and professional education.",
-                "status": ""
-            },
-            "aws": {
-                "title": "Road to the cloud",
-                "text": "Exploring AWS and the fundamentals of cloud services and infrastructure. No certifications yet.",
-                "status": "Learning"
-            }
+        "orbitAria": "Map of my areas: backend, frontend, computer vision and cloud (learning).",
+        "nodes": {
+            "backend": "Backend",
+            "frontend": "Frontend",
+            "vision": "Computer vision",
+            "cloud": "Cloud · learning"
         }
     },
-    "projectsIndex": {
-        "eyebrow": "Projects",
-        "title": "Project exploration",
-        "text": "Three projects with a case study and others in the workshop. Each case shows the problem, the solution and how it's built.",
-        "starLabel": "Star project",
-        "viewCase": "View case study",
-        "workshopTitle": "In the workshop",
-        "noDescription": "Project in development. More details soon.",
-        "repo": "View repository",
-        "summary": {
-            "retailvision": "Real-time foot-traffic analytics: detects people by zone from cameras with YOLOv8 and turns it into indicators, a heat map and reports.",
-            "alfapet": "Clinical management for a veterinary clinic: patients, appointments, history, inventory and sales, with role-based permissions and an RLS-protected database.",
-            "educore": "Academic management for schools: enrollment, attendance, grades and report cards, built with PHP and PostgreSQL.",
-            "plantmilk": "E-commerce platform for dairy and plant-based beverages."
-        }
+    "manifesto": {
+        "eyebrow": "Manifesto",
+        "title": "Expert in nothing.",
+        "p1": "Technology changes faster than anyone can master it.",
+        "p2": "So I don't pretend to know it all: I protect my curiosity and adapt.",
+        "p3": "Every project is an excuse to learn something new and build a better solution."
     },
-    "caseUi": {
-        "problem": "Problem",
-        "solution": "Solution",
-        "pipeline": "From frame to data",
-        "why": "Why these decisions",
-        "how": "How it works",
-        "gallery": "Screenshots",
-        "result": "Result",
-        "learned": "What I learned",
-        "live": "View live",
+    "star": {
+        "eyebrow": "Star project · Thesis · 2026",
+        "problemLabel": "Problem",
+        "problem": "A business doesn't know precisely how people move inside its store.",
+        "solutionLabel": "Solution",
+        "solution": "A system that detects and tracks people by zone from one or several cameras using YOLOv8, and turns it into live KPIs, a heat map, dwell time per zone and exportable reports.",
+        "cta": "View the case",
         "repo": "Code on GitHub",
-        "next": "Next project",
-        "all": "All projects"
+        "shotAlt": "RetailVision Analytics monitoring dashboard with camera feed, real-time KPIs, zone distribution and heat map."
     },
-    "cases": {
-        "retailvision": {
-            "tagline": "Real-time foot-traffic analytics from cameras.",
-            "problem": "Many stores have no way of knowing how many people come in or how they move inside. Without that data, decisions like where to place a product or a promotion are made by eye.",
-            "solution": "RetailVision Analytics detects and tracks people by zone with YOLOv8 from one or several cameras, and turns video into useful information: live indicators, a heat map, dwell time per zone and exportable reports.",
-            "pipeline": [
-                {
-                    "title": "Camera",
-                    "text": "Webcam or RTSP"
-                },
-                {
-                    "title": "Detection",
-                    "text": "YOLOv8 + OpenCV"
-                },
-                {
-                    "title": "API",
-                    "text": "FastAPI"
-                },
-                {
-                    "title": "Real time",
-                    "text": "WebSocket + MJPEG"
-                },
-                {
-                    "title": "Dashboard",
-                    "text": "React + Recharts"
-                }
-            ],
-            "why": "YOLOv8 and OpenCV can detect and track people on video in real time. FastAPI exposes the data through an API and WebSocket, and React presents it in a dashboard that updates instantly.",
-            "how": [
-                "Video capture from a webcam or RTSP cameras, with several configurable cameras.",
-                "Detection and tracking of people by zone with YOLOv8 and OpenCV, in Python.",
-                "FastAPI server exposing an API and sending live data over WebSocket, plus an MJPEG stream of the processed video.",
-                "React dashboard with Monitor, Analysis, Reports and Video views, Recharts charts and a heat map.",
-                "Model evaluation metrics (precision, recall and F1), video upload for analysis and a report exportable to PDF."
-            ],
-            "result": "End-to-end working system running locally, with the views and reports described. It is not deployed yet, and measured results will be published later.",
-            "learned": "Integrating computer vision with a real-time API and a web interface: from frame to data, and from data to a decision.",
-            "shots": {
-                "dashboard": "Monitoring dashboard",
-                "analisis": "Analysis",
-                "reporte": "Report",
-                "reporte_recomendaciones": "Report with recommendations",
-                "video_analisis": "Video analysis",
-                "multi_camara": "Multi-camera"
-            }
-        },
-        "alfapet": {
-            "tagline": "Clinical management for a veterinary clinic.",
-            "problem": "A veterinary clinic needs to manage patients, appointments, clinical history, inventory and sales, with different people accessing different information.",
-            "solution": "An internal web system with clinical and management modules, three roles with different permissions and a database that enforces those rules at the engine level.",
-            "why": "Supabase and PostgreSQL with RLS policies move access control into the database, not just the interface. TypeScript and Zod validate data, and React Router with SSR renders on the server.",
-            "how": [
-                "Frontend in React 19 and TypeScript with React Router (SSR), Vite and Tailwind CSS.",
-                "Authentication with Supabase Auth and three roles with distinct permissions.",
-                "PostgreSQL with RLS policies, RPC functions and audit triggers.",
-                "Data validation with Zod and tests with Vitest and pgTAP.",
-                "Dockerfile included and deployment on Vercel."
-            ],
-            "result": "System deployed and running at alfapet.vercel.app. Access is for registered users only, so there is no public demo. It was evaluated using the ISO 25010 quality model as a reference framework, which is not a certification.",
-            "learned": "Designing layered security with real permissions in the database, and sustaining a project with tests and auditing."
-        },
-        "educore": {
-            "tagline": "Academic management for schools.",
-            "problem": "A school must manage enrollment, attendance, grades and report cards, with different roles working on the same data.",
-            "solution": "EduCore, a web system with three roles covering enrollment, attendance, grades and report card generation.",
-            "why": "Native PHP with an MVC structure and PostgreSQL hosted on Supabase, with vanilla JavaScript on the client: a simple base, runnable on XAMPP and not tied to a framework.",
-            "how": [
-                "Backend in native PHP 8 with folders organized as MVC.",
-                "PostgreSQL database hosted on Supabase.",
-                "Interface with HTML, CSS and vanilla JavaScript.",
-                "Three user roles with enrollment, attendance, grades and report card modules.",
-                "Local installation on XAMPP."
-            ],
-            "result": "Working system in a local environment. It is not deployed.",
-            "learned": "Structuring a backend without a framework, modeling academic data in SQL and separating responsibilities by role."
+    "worlds": {
+        "eyebrow": "Beyond the star project",
+        "title": "Other worlds",
+        "all": "See all projects",
+        "alfapet": "Clinical management for a veterinary clinic: patients, appointments, history, inventory and sales, with role-based permissions and an RLS-protected database.",
+        "educore": "Academic management for schools: enrollment, attendance, grades and report cards, built with PHP and PostgreSQL."
+    },
+    "cta": {
+        "eyebrow": "Contact",
+        "title": "Let's talk",
+        "text": "If something you saw interests you, let's chat."
+    },
+    "pages": {
+        "wip": "Section under construction.",
+        "stack": "Technologies",
+        "viewCase": "View case",
+        "repo": "Repository",
+        "live": "View live",
+        "links": "Links",
+        "contactForm": "The form will be enabled once it is connected to a real delivery service.",
+        "notFound": {
+            "title": "Page not found",
+            "text": "This route does not exist in the Lux.dev universe.",
+            "back": "Back to home"
         }
+    },
+    "footer": {
+        "designBy": "Graphic design",
+        "creditAria": "Lilian Gutiérrez, graphic design (opens in a new tab)",
+        "rights": "© 2026 LC.dev"
     }
 }

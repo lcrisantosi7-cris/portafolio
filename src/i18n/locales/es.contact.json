@@ -1,0 +1,54 @@
+{
+    "contact": {
+        "metaDescription": "Escríbeme para oportunidades, colaboraciones o proyectos de desarrollo Full Stack y visión por computadora.",
+        "eyebrow": "Contacto",
+        "title": "Hablemos",
+        "lead": "Cuéntame qué tienes en mente y te respondo por correo.",
+        "emailLabel": "Correo",
+        "copy": "Copiar",
+        "copied": "Copiado",
+        "copyAria": "Copiar el correo al portapapeles",
+        "socialLabel": "En línea",
+        "localTime": "Hora en Perú",
+        "form": {
+            "name": "Nombre",
+            "namePh": "Tu nombre",
+            "email": "Correo",
+            "emailPh": "tu@correo.com",
+            "type": "¿Sobre qué quieres escribirme?",
+            "typeAria": "Tipo de mensaje",
+            "message": "Mensaje",
+            "messagePh": "Cuéntame sobre tu proyecto, la oportunidad o tu idea…",
+            "send": "Enviar mensaje",
+            "sending": "Enviando…"
+        },
+        "types": {
+            "job": "Oportunidad laboral",
+            "backend": "Backend y APIs",
+            "fullstack": "Full Stack",
+            "vision": "Visión por computadora",
+            "other": "Otro"
+        },
+        "success": {
+            "title": "Mensaje enviado",
+            "text": "Gracias por escribirme. Si tu correo es correcto, recibirás una confirmación y te responderé lo antes posible.",
+            "again": "Enviar otro mensaje"
+        },
+        "errors": {
+            "name": "Escribe tu nombre.",
+            "emailEmpty": "Escribe tu correo.",
+            "email": "Ese correo no parece válido.",
+            "message": "Cuéntame un poco más (mínimo 10 caracteres).",
+            "cooldown": "Espera un momento antes de enviar otro mensaje.",
+            "offline": "Sin conexión. Verifica tu red e intenta de nuevo.",
+            "unavailable": "El servicio de envío no está disponible ahora. Escríbeme directamente por correo.",
+            "rate_limited": "Demasiados mensajes seguidos. Intenta de nuevo en unos minutos.",
+            "send_failed": "No se pudo enviar el mensaje. Intenta de nuevo en unos minutos.",
+            "config": "El servicio de correo no está configurado.",
+            "origin": "Origen no permitido.",
+            "bad_request": "Solicitud inválida.",
+            "method": "Método no permitido.",
+            "generic": "No se pudo enviar el mensaje."
+        }
+    }
+}

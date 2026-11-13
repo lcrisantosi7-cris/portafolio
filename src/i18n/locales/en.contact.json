@@ -1,0 +1,54 @@
+{
+    "contact": {
+        "metaDescription": "Write to me about opportunities, collaborations or Full Stack and computer vision development projects.",
+        "eyebrow": "Contact",
+        "title": "Let's talk",
+        "lead": "Tell me what you have in mind and I'll reply by email.",
+        "emailLabel": "Email",
+        "copy": "Copy",
+        "copied": "Copied",
+        "copyAria": "Copy the email to the clipboard",
+        "socialLabel": "Online",
+        "localTime": "Time in Peru",
+        "form": {
+            "name": "Name",
+            "namePh": "Your name",
+            "email": "Email",
+            "emailPh": "you@email.com",
+            "type": "What would you like to write about?",
+            "typeAria": "Message type",
+            "message": "Message",
+            "messagePh": "Tell me about your project, the opportunity or your idea…",
+            "send": "Send message",
+            "sending": "Sending…"
+        },
+        "types": {
+            "job": "Job opportunity",
+            "backend": "Backend and APIs",
+            "fullstack": "Full Stack",
+            "vision": "Computer vision",
+            "other": "Other"
+        },
+        "success": {
+            "title": "Message sent",
+            "text": "Thanks for writing. If your email is correct you'll get a confirmation, and I'll reply as soon as I can.",
+            "again": "Send another message"
+        },
+        "errors": {
+            "name": "Enter your name.",
+            "emailEmpty": "Enter your email.",
+            "email": "That email doesn't look valid.",
+            "message": "Tell me a bit more (at least 10 characters).",
+            "cooldown": "Please wait a moment before sending another message.",
+            "offline": "No connection. Check your network and try again.",
+            "unavailable": "The sending service isn't available right now. Please email me directly.",
+            "rate_limited": "Too many messages in a row. Try again in a few minutes.",
+            "send_failed": "The message couldn't be sent. Try again in a few minutes.",
+            "config": "The email service isn't configured.",
+            "origin": "Origin not allowed.",
+            "bad_request": "Invalid request.",
+            "method": "Method not allowed.",
+            "generic": "The message couldn't be sent."
+        }
+    }
+}

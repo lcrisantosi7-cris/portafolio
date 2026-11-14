@@ -13,7 +13,12 @@
   font-weight: 800;
   font-style: normal;
   font-display: swap;
-}
+}  
+html {
+    color-scheme: dark;
+    background: var(--color-void-950);
+    font-size: clamp(16px, 0.55vw + 8px, 22px);
+  }
 
 @theme {
   --color-void-950: #03060f;
@@ -67,9 +72,6 @@
   
 }
 
-@utility font-condensed {
-  font-stretch: 75%;
-}
 
 @utility text-flame-gradient {
   background-image: linear-gradient(

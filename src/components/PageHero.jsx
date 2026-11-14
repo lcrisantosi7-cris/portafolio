@@ -31,7 +31,7 @@ export default function PageHero({ eyebrow, title, children }) {
                 className="absolute inset-0 -z-10"
                 style={{
                     background:
-                        'radial-gradient(60% 70% at 85% 0%, rgba(29,79,148,0.5) 0%, transparent 70%), linear-gradient(180deg, #071a33 0%, #03060f 100%)',
+                        'radial-gradient(60% 70% at 85% 0%, rgba(29,79,148,0.35) 0%, transparent 70%), linear-gradient(180deg, #050f1f 0%, #03060f 100%)',
                 }}
             />
             <Starfield className="-z-10 opacity-70" />
@@ -52,7 +52,7 @@ export default function PageHero({ eyebrow, title, children }) {
                 <p data-fade className="font-mono text-xs uppercase tracking-[0.2em] text-glow-300">
                     {eyebrow}
                 </p>
-                <h1 className="mt-4 max-w-5xl font-display font-condensed font-extrabold uppercase leading-[0.9] text-[length:clamp(3rem,10vw,8rem)]">
+                <h1 className="mt-4 max-w-5xl font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-[length:clamp(2.75rem,8vw,7rem)]">
                     <span className="block overflow-hidden py-[0.04em]">
                         <span data-line className="block text-flame-gradient">
                             {title}

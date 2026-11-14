@@ -50,7 +50,7 @@ export default function Manifesto() {
                 <h2
                     id="manifesto-title"
                     data-title
-                    className="mt-4 font-display font-condensed font-extrabold uppercase leading-[0.9] text-flame-gradient text-[length:clamp(4rem,15vw,12rem)]"
+                    className="mt-4 font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-flame-gradient text-[length:clamp(3rem,9.5vw,9.5rem)]"
                 >
                     {t('manifesto.title')}
                 </h2>

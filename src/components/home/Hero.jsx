@@ -103,7 +103,7 @@ export default function Hero() {
                 className="absolute inset-0 z-0"
                 style={{
                     background:
-                        'radial-gradient(60% 50% at 78% 28%, rgba(29,79,148,0.55) 0%, transparent 70%), radial-gradient(45% 40% at 12% 18%, rgba(255,106,19,0.14) 0%, transparent 70%), linear-gradient(180deg, #071a33 0%, #040a16 55%, #03060f 100%)',
+                        'radial-gradient(60% 50% at 78% 28%, rgba(29,79,148,0.38) 0%, transparent 70%), radial-gradient(45% 40% at 12% 18%, rgba(255,106,19,0.14) 0%, transparent 70%), linear-gradient(180deg, #071a33 0%, #040a16 55%, #03060f 100%)',
                 }}
             />
             <Starfield className="z-[1]" />
@@ -145,7 +145,7 @@ export default function Hero() {
             <h1
                 id="hero-title"
                 data-scroll="name"
-                className="hero-name pointer-events-none select-none font-display font-condensed font-extrabold uppercase tracking-[-0.01em]"
+                className="hero-name pointer-events-none select-none font-display font-extrabold tracking-[-0.02em]"
             >
                 <span className="block overflow-hidden py-[0.03em]">
                     <span data-hero="name-line" className="block text-flame-gradient">
@@ -196,7 +196,7 @@ export default function Hero() {
             {/* Desvanecido inferior hacia la siguiente sección */}
             <div
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-32 bg-gradient-to-t from-void-950 to-transparent"
+                className="pointer-events-none absolute inset-x-0 bottom-0 z-[5] h-[26svh] bg-gradient-to-t from-void-950 to-transparent"
             />
 
             {/* Texto y llamadas a la acción */}

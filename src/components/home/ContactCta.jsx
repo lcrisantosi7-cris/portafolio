@@ -22,7 +22,7 @@ export default function ContactCta() {
             <h2
                 id="cta-title"
                 data-reveal="mask"
-                className="mx-auto mt-6 font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(3.5rem,13vw,11rem)]"
+                className="mx-auto mt-6 font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-cream-100 text-[length:clamp(3.25rem,11vw,9.5rem)]"
             >
                 {t('cta.title')}
             </h2>

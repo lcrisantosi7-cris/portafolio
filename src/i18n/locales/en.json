@@ -1,7 +1,7 @@
 {
     "meta": {
         "title": "Luis Crisanto | Lux.dev",
-        "description": "Portfolio of Luis Crisanto, Full Stack developer: software and computer vision projects."
+        "description": "Luis Crisanto, Full Stack developer (React, Node.js, PHP). Software and computer vision projects: RetailVision, AlfaPet and EduCore."
     },
     "a11y": {
         "skip": "Skip to content"
@@ -43,11 +43,15 @@
         }
     },
     "manifesto": {
-        "eyebrow": "01 — brand",
-        "title": "Expert in nothing.",
+        "eyebrow": "01 — My philosophy",
+        "title": "Curiosity with method.",
         "p1": "Technology changes faster than anyone can master it.",
-        "p2": "So I don't pretend to know it all: I protect my curiosity and adapt.",
-        "p3": "Every project is an excuse to learn something new and build a better solution."
+        "p2": "So I don't collect tools: I learn the one the problem asks for, and I learn it properly.",
+        "p3": "Every project leaves me with something I didn't know and a better solution than the last."
+    },
+    "pages.notFound": {
+        "title": "This page doesn't exist",
+        "text": "The link may be broken or the page may have moved. Head back home and pick up from there."
     },
     "star": {
         "eyebrow": "02 — Star project · 2026",

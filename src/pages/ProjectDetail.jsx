@@ -131,12 +131,21 @@ function CaseStudy({ project }) {
                 <CaseSection n={num()} label={t('caseUi.learned')}>
                     <p className="max-w-3xl text-xl leading-relaxed text-cream-100/85">{t(`${base}.learned`)}</p>
                 </CaseSection>
-
+                <section
+                    data-reveal
+                    className="flex flex-col items-start justify-between gap-6 border-t border-white/10 py-16 md:flex-row md:items-center"
+                >
+                    <div>
+                        <h2 className="font-display text-3xl font-bold md:text-4xl">{t('caseUi.ctaTitle')}</h2>
+                        <p className="mt-3 max-w-md text-cream-100/70">{t('caseUi.ctaText')}</p>
+                    </div>
+                    <LinkButton to="/contact">{t('caseUi.ctaButton')}</LinkButton>
+                </section>
                 <section data-reveal className="border-t border-white/10 py-20 text-center">
                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-glow-300">{t('caseUi.next')}</p>
                     <TransitionLink
                         to={`/projects/${next.slug}`}
-                        className="mt-4 inline-block font-display font-condensed font-extrabold uppercase leading-[0.9] text-flame-gradient text-[length:clamp(3rem,10vw,8rem)]"
+                        className="mt-4 inline-block font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-flame-gradient text-[length:clamp(2.75rem,8vw,7rem)]"
                     >
                         {next.name}
                     </TransitionLink>

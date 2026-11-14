@@ -5,7 +5,7 @@
         "lead": "Desarrollador Full Stack con curiosidad por entender un sistema completo.",
         "p1": "Soy Luis Crisanto. Trabajo en proyectos que combinan interfaz, API REST y bases de datos, y me interesa entender cómo se conectan esas piezas para que un sistema crezca sin romperse.",
         "p2": "Estudio Ingeniería de Sistemas en la Universidad César Vallejo. Además del desarrollo web me atraen la infraestructura, las redes, el IoT y la visión por computadora, que es el terreno de mi proyecto de tesis.",
-        "p3": "Mi siguiente paso es la arquitectura de soluciones y la nube. Hoy estoy aprendiendo AWS: todavía no tengo certificaciones y lo presento tal cual, como un área de aprendizaje.",
+        "p3": "Mi siguiente paso es la arquitectura de soluciones y la nube: hoy estoy aprendiendo AWS.",
         "photoAlt": "Retrato de Luis Crisanto",
         "facts": {
             "studiesLabel": "Estudios",
@@ -62,19 +62,19 @@
             "courses": {
                 "title": "Formación complementaria",
                 "text": "Más de 37 cursos relacionados con mi formación académica y profesional.",
-                "status": ""
+                "status": "En constante aprendizaje"
             },
             "aws": {
                 "title": "Camino hacia la nube",
-                "text": "Exploro AWS y los fundamentos de servicios e infraestructura cloud. Todavía sin certificaciones.",
+                "text": "Exploro AWS y los fundamentos de servicios e infraestructura cloud.",
                 "status": "En aprendizaje"
             }
         }
     },
     "projectsIndex": {
         "eyebrow": "Proyectos",
-        "title": "Exploración de proyectos",
-        "text": "Tres proyectos con caso de estudio y otros en el taller. Cada caso muestra el problema, la solución y cómo está construido.",
+        "title": "Lo que he construido",
+        "text": "Tres proyectos con caso de estudio y otros en el taller. Cada uno cuenta el problema, la solución y cómo está construido.",
         "starLabel": "Proyecto estrella",
         "viewCase": "Ver caso de estudio",
         "workshopTitle": "En el taller",
@@ -99,7 +99,10 @@
         "live": "Ver en producción",
         "repo": "Código en GitHub",
         "next": "Siguiente proyecto",
-        "all": "Todos los proyectos"
+        "all": "Todos los proyectos",
+        "ctaTitle": "¿Tienes un problema parecido?",
+        "ctaText": "Cuéntame qué necesitas y vemos cómo resolverlo.",
+        "ctaButton": "Escríbeme"
     },
     "cases": {
         "retailvision": {

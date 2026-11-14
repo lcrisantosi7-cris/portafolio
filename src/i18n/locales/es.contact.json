@@ -10,6 +10,10 @@
         "copyAria": "Copiar el correo al portapapeles",
         "socialLabel": "En línea",
         "localTime": "Hora en Perú",
+        "cv": "Descargar CV",
+        "card": {
+            "role": "Full Stack Developer"
+        },
         "form": {
             "name": "Nombre",
             "namePh": "Tu nombre",
@@ -50,5 +54,20 @@
             "method": "Método no permitido.",
             "generic": "No se pudo enviar el mensaje."
         }
+    },
+    "footer": {
+        "line": "Si tienes un problema que resolver, escríbeme.",
+        "top": "Volver arriba",
+        "rights": "© 2026 Luis Crisanto"
+    },
+    "cookies": {
+        "title": "Cookies",
+        "text": "Este sitio web utiliza cookies para mejorar la experiencia del usuario y analizar el tráfico. Al continuar navegando, aceptas el uso de cookies.",
+        "accept": "Aceptar",
+        "decline": "Rechazar"
+    },
+    "nav": {
+        "status": "Abierto a oportunidades",
+        "statusPlace": "Perú"
     }
 }

@@ -10,6 +10,10 @@
         "copyAria": "Copy the email to the clipboard",
         "socialLabel": "Online",
         "localTime": "Time in Peru",
+        "cv": "Download CV",
+        "card": {
+            "role": "Full Stack Developer"
+        },
         "form": {
             "name": "Name",
             "namePh": "Your name",
@@ -50,5 +54,14 @@
             "method": "Method not allowed.",
             "generic": "The message couldn't be sent."
         }
+    },
+    "footer": {
+        "line": "If you have a problem to solve, write to me.",
+        "top": "Back to top",
+        "rights": "© 2026 Luis Crisanto"
+    },
+    "nav": {
+        "status": "Open to opportunities",
+        "statusPlace": "Peru"
     }
 }

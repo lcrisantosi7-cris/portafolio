@@ -62,11 +62,11 @@
             "courses": {
                 "title": "Complementary training",
                 "text": "More than 37 courses related to my academic and professional education.",
-                "status": ""
+                "status": "In constant learning"
             },
             "aws": {
                 "title": "Road to the cloud",
-                "text": "Exploring AWS and the fundamentals of cloud services and infrastructure. No certifications yet.",
+                "text": "Exploring AWS and the fundamentals of cloud services and infrastructure.",
                 "status": "Learning"
             }
         }
@@ -99,7 +99,10 @@
         "live": "View live",
         "repo": "Code on GitHub",
         "next": "Next project",
-        "all": "All projects"
+        "all": "All projects",
+        "ctaTitle": "Got a similar problem?",
+        "ctaText": "Tell me what you need and we’ll work out how to solve it.",
+        "ctaButton": "Write to me"
     },
     "cases": {
         "retailvision": {

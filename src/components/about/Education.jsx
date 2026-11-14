@@ -31,7 +31,7 @@ export default function Education() {
                 <h2
                     id="education-title"
                     data-reveal
-                    className="mt-4 font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(3rem,7vw,6rem)]"
+                    className="mt-4 font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-cream-100 text-[length:clamp(3rem,7vw,6rem)]"
                 >
                     {t('about.education.title')}
                 </h2>

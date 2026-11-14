@@ -9,7 +9,7 @@ import { projects, STATUS } from '../data/projects'
 
 const star = projects.find((p) => p.tier === 'star')
 const featured = projects.filter((p) => p.tier === 'featured')
-const workshop = projects.filter((p) => p.tier === 'secondary')
+const workshop = projects.filter((p) => p.tier === 'secondary' && !p.hidden)
 
 function Chips({ items, limit }) {
     return (
@@ -45,7 +45,7 @@ function StarCard({ project }) {
                     <p className="font-mono text-xs uppercase tracking-[0.2em] text-glow-300">
                         {t('projectsIndex.starLabel')} · {project.year}
                     </p>
-                    <h2 className="mt-4 font-display font-condensed font-extrabold uppercase leading-[0.9] text-[length:clamp(3rem,7vw,6.5rem)]">
+                    <h2 className="mt-4 font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-[length:clamp(3rem,7vw,6.5rem)]">
                         <TransitionLink
                             to={`/projects/${project.slug}`}
                             className="text-flame-gradient after:absolute after:inset-0 after:content-['']"
@@ -128,7 +128,7 @@ export default function Projects() {
                 <section data-reveal aria-labelledby="workshop-title" className="pt-16">
                     <h2
                         id="workshop-title"
-                        className="font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(2.5rem,6vw,5rem)]"
+                        className="font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-cream-100 text-[length:clamp(2.5rem,6vw,5rem)]"
                     >
                         {t('projectsIndex.workshopTitle')}
                     </h2>

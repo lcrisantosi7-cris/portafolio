@@ -4,6 +4,7 @@ import PageMeta from '../components/PageMeta'
 import PageHero from '../components/PageHero'
 import useReveal from '../hooks/useReveal'
 import { links } from '../data/links'
+import LocalTime from '../components/LocalTime'
 
 const ENDPOINT = '/api/contact'
 const MAX_LEN = 2000
@@ -43,27 +44,8 @@ async function sendMessage(payload) {
     })
 }
 
-function LocalTime() {
-    const { i18n } = useTranslation()
-    const locale = i18n.resolvedLanguage === 'en' ? 'en-US' : 'es-PE'
-    const [now, setNow] = useState(() => new Date())
 
-    useEffect(() => {
-        const id = setInterval(() => setNow(new Date()), 30_000)
-        return () => clearInterval(id)
-    }, [])
-
-    const text = new Intl.DateTimeFormat(locale, {
-        timeZone: 'America/Lima',
-        hour: '2-digit',
-        minute: '2-digit',
-        hourCycle: 'h23',
-    }).format(now)
-
-    return <span className="tabular-nums">{text}</span>
-}
-
-function CopyEmail() {
+function ContactCard() {
     const { t } = useTranslation()
     const [copied, setCopied] = useState(false)
     const timer = useRef(null)
@@ -81,24 +63,93 @@ function CopyEmail() {
         }
     }
 
+    const row =
+        'group flex items-center justify-between gap-3 rounded-2xl px-4 py-3 ring-1 ring-white/10 transition-colors hover:bg-white/5 hover:ring-flame-500/40'
+
     return (
-        <div>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-flame-400">{t('contact.emailLabel')}</p>
-            <button
-                type="button"
-                onClick={copy}
-                aria-label={t('contact.copyAria')}
-                className="group mt-3 flex flex-wrap items-center gap-3 break-all text-left font-display text-2xl font-bold transition-colors hover:text-flame-400"
+        <aside data-reveal className="self-start overflow-hidden rounded-3xl bg-navy-900/60 ring-1 ring-white/10">
+            <div
+                aria-hidden="true"
+                className="relative h-28"
+                style={{
+                    background: 'radial-gradient(120% 160% at 85% 130%, #ffd9a3 0%, #ff6a13 32%, #b53209 62%, #3a1019 100%)',
+                }}
             >
-                {links.email}
-                <span
-                    aria-live="polite"
-                    className="shrink-0 rounded-full px-3 py-1 font-mono text-[11px] font-normal uppercase tracking-widest text-cream-100/80 ring-1 ring-white/20 transition-colors group-hover:ring-flame-500"
-                >
-                    {copied ? t('contact.copied') : t('contact.copy')}
-                </span>
-            </button>
-        </div>
+                <div
+                    className="absolute inset-0 opacity-30"
+                    style={{
+                        backgroundImage: 'radial-gradient(circle at 1px 1px, #fff 1px, transparent 0)',
+                        backgroundSize: '16px 16px',
+                    }}
+                />
+            </div>
+
+            <div className="px-6 pb-6">
+                <div className="-mt-12 flex items-end gap-4">
+                    <img
+                        src="/assets/images/luis-cutout.webp"
+                        alt=""
+                        width="96"
+                        height="96"
+                        className="size-24 shrink-0 rounded-full bg-navy-800 object-cover object-top ring-4 ring-navy-900"
+                    />
+                    <div className="pb-1">
+                        <p className="font-display text-xl font-bold leading-tight">Luis Crisanto</p>
+                        <p className="text-sm text-cream-100/70">{t('contact.card.role')}</p>
+                    </div>
+                </div>
+
+                <ul className="mt-6 space-y-2.5">
+                    <li data-reveal className={row}>
+                        <a href={`mailto:${links.email}`} className="min-w-0 break-all text-sm hover:text-flame-400">
+                            {links.email}
+                        </a>
+                        <button
+                            type="button"
+                            onClick={copy}
+                            aria-label={t('contact.copyAria')}
+                            aria-live="polite"
+                            className="shrink-0 rounded-full px-3 py-1 font-mono text-[11px] uppercase tracking-widest text-cream-100/80 ring-1 ring-white/20 transition-colors hover:ring-flame-500"
+                        >
+                            {copied ? t('contact.copied') : t('contact.copy')}
+                        </button>
+                    </li>
+                    {[
+                        { name: 'LinkedIn', url: links.linkedin },
+                        { name: 'GitHub', url: links.github },
+                    ].map((item) => (
+                        <li key={item.name} data-reveal>
+                            <a href={item.url} target="_blank" rel="noopener noreferrer" className={row}>
+                                <span className="text-sm">{item.name}</span>
+                                <span
+                                    aria-hidden="true"
+                                    className="text-cream-100/50 transition-transform group-hover:translate-x-0.5 group-hover:text-flame-400"
+                                >
+                                    ↗
+                                </span>
+                            </a>
+                        </li>
+                    ))}
+                    <li
+                        data-reveal
+                        className="flex items-center justify-between px-4 pt-2 font-mono text-xs uppercase tracking-[0.2em] text-cream-100/60"
+                    >
+                        <span>{t('contact.localTime')}</span>
+                        <LocalTime />
+                    </li>
+                </ul>
+
+                {links.cv && (
+                    <a
+                        href={links.cv}
+                        download
+                        className="mt-5 inline-flex w-full items-center justify-center rounded-full px-6 py-3 text-sm font-medium ring-1 ring-white/25 transition-colors hover:bg-white/10"
+                    >
+                        {t('contact.cv')}
+                    </a>
+                )}
+            </div>
+        </aside>
     )
 }
 
@@ -225,34 +276,7 @@ export default function Contact() {
             </PageHero>
 
             <div ref={root} className="mx-auto grid max-w-7xl gap-14 px-6 pb-28 lg:grid-cols-[340px_1fr] lg:gap-20">
-                <aside data-reveal className="space-y-10">
-                    <CopyEmail />
-
-                    <div>
-                        <p className="font-mono text-xs uppercase tracking-[0.2em] text-flame-400">{t('contact.socialLabel')}</p>
-                        <ul className="mt-3 flex flex-wrap gap-3">
-                            {[
-                                { name: 'GitHub', url: links.github },
-                                { name: 'LinkedIn', url: links.linkedin },
-                            ].map((item) => (
-                                <li key={item.name}>
-                                    <a
-                                        href={item.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm text-cream-100/85 ring-1 ring-white/20 transition-colors hover:text-flame-400 hover:ring-flame-500"
-                                    >
-                                        {item.name} <span aria-hidden="true">↗</span>
-                                    </a>
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <p className="font-mono text-xs uppercase tracking-[0.2em] text-cream-100/60">
-                        {t('contact.localTime')} · <LocalTime />
-                    </p>
-                </aside>
+                <ContactCard />
 
                 <section data-reveal>
                     {status === 'success' ? (
@@ -260,7 +284,7 @@ export default function Contact() {
                             <h2
                                 ref={doneRef}
                                 tabIndex={-1}
-                                className="font-display font-condensed font-extrabold uppercase leading-[0.9] text-flame-gradient text-[length:clamp(2.5rem,6vw,4.5rem)] outline-none"
+                                className="font-display font-extrabold leading-[0.95] tracking-[-0.02em] text-flame-gradient text-[length:clamp(2.5rem,6vw,4.5rem)] outline-none"
                             >
                                 {t('contact.success.title')}
                             </h2>
@@ -331,8 +355,8 @@ export default function Contact() {
                                             disabled={loading}
                                             onClick={() => setType(type === item.value ? '' : item.value)}
                                             className={`rounded-full px-4 py-2 text-sm ring-1 transition-colors ${type === item.value
-                                                    ? 'bg-flame-500 text-navy-950 ring-flame-500'
-                                                    : 'text-cream-100/80 ring-white/15 hover:ring-white/40'
+                                                ? 'bg-flame-500 text-navy-950 ring-flame-500'
+                                                : 'text-cream-100/80 ring-white/15 hover:ring-white/40'
                                                 }`}
                                         >
                                             {t(`contact.types.${item.key}`)}

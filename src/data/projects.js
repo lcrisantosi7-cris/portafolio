@@ -61,6 +61,7 @@ export const projects = [
     },
     {
         slug: 'winterbeauty',
+        hidden: true, // oculto hasta tener datos reales
         name: 'WinterBeauty',
         year: null,
         tier: 'secondary',
@@ -72,6 +73,7 @@ export const projects = [
     },
     {
         slug: 'nexusiq',
+        hidden: true, // oculto hasta tener datos reales
         name: 'NexusIQ',
         year: null,
         tier: 'secondary',

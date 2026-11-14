@@ -52,7 +52,7 @@ export default function OtherWorlds() {
                         <li
                             key={project.slug}
                             data-reveal
-                            className="group relative overflow-hidden rounded-3xl bg-navy-900/60 p-8 ring-1 ring-white/10 transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:ring-flame-500/40 md:p-10"
+                            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(145deg,rgba(11,42,82,0.5),rgba(4,10,22,0.84))] p-8 shadow-[0_24px_70px_-48px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-1 hover:border-flame-500/35 hover:shadow-[0_30px_80px_-48px_rgba(255,106,19,0.2)] md:p-10"
                         >
                             <span
                                 aria-hidden="true"

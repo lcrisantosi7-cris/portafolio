@@ -219,3 +219,59 @@ html {
     display: inline;
   }
 }
+
+/* Refinamiento global: superficies, lectura y controles consistentes. */
+@layer base {
+  html {
+    scroll-padding-top: 6rem;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    overflow-x: clip;
+    background-image:
+      radial-gradient(ellipse at 50% -35%, rgba(29, 79, 148, 0.12), transparent 58%),
+      linear-gradient(180deg, rgba(4, 10, 22, 0.18), transparent 42%);
+    background-attachment: fixed;
+  }
+
+  img, svg, video, canvas { max-width: 100%; }
+  button, input, textarea, select { font: inherit; }
+  button:not(:disabled), a[href] { -webkit-tap-highlight-color: transparent; }
+  a { text-underline-offset: 0.22em; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { background: #03060f; }
+  ::-webkit-scrollbar-thumb {
+    border: 3px solid #03060f;
+    border-radius: 999px;
+    background: rgba(255, 138, 61, 0.48);
+  }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255, 138, 61, 0.78); }
+
+  @supports (scrollbar-color: auto) {
+    * { scrollbar-color: rgba(255, 138, 61, 0.55) #03060f; scrollbar-width: thin; }
+  }
+}
+
+@layer components {
+  .glass-panel {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(145deg, rgba(11, 42, 82, 0.48), rgba(4, 10, 22, 0.72));
+    box-shadow: 0 24px 80px -44px rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(18px);
+  }
+
+  .interactive-lift {
+    transition: transform 260ms cubic-bezier(.22, 1, .36, 1), border-color 260ms ease, box-shadow 260ms ease;
+  }
+
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .interactive-lift:hover {
+      transform: translateY(-4px);
+      border-color: rgba(255, 138, 61, 0.38);
+      box-shadow: 0 22px 55px -32px rgba(255, 106, 19, 0.3);
+    }
+  }
+}

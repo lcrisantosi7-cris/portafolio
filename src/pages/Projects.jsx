@@ -30,7 +30,7 @@ function StarCard({ project }) {
     return (
         <article
             data-reveal
-            className="group relative isolate overflow-hidden rounded-[2rem] bg-navy-900/50 p-8 ring-1 ring-white/10 transition-shadow duration-500 hover:ring-flame-500/40 md:p-14"
+            className="group relative isolate overflow-hidden rounded-[2rem] border border-white/10 bg-[linear-gradient(145deg,rgba(11,42,82,0.56),rgba(4,10,22,0.82))] p-8 shadow-[0_35px_100px_-55px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-[border-color,box-shadow,transform] duration-700 hover:-translate-y-1 hover:border-flame-500/35 hover:shadow-[0_40px_110px_-55px_rgba(255,106,19,0.24)] md:p-14"
         >
             <div
                 aria-hidden="true"
@@ -82,7 +82,7 @@ function FeaturedCard({ project }) {
     return (
         <li
             data-reveal
-            className="group relative isolate overflow-hidden rounded-3xl bg-navy-900/60 p-8 ring-1 ring-white/10 transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:ring-flame-500/40 md:p-10"
+            className="group relative isolate overflow-hidden rounded-3xl border border-white/10 bg-[linear-gradient(145deg,rgba(11,42,82,0.5),rgba(4,10,22,0.84))] p-8 shadow-[0_24px_70px_-48px_rgba(0,0,0,0.9)] backdrop-blur-xl transition-[transform,border-color,box-shadow] duration-500 hover:-translate-y-1 hover:border-flame-500/35 hover:shadow-[0_30px_80px_-48px_rgba(255,106,19,0.2)] md:p-10"
         >
             <span
                 aria-hidden="true"

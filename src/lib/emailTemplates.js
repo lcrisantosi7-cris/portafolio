@@ -8,6 +8,17 @@
 
 const URL = 'https://luis-crisanto.vercel.app'
 
+const escapeHtml = (value) =>
+  String(value ?? '').replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[char])
+
+const safeMailto = (value) => encodeURIComponent(String(value ?? '')).replace(/%40/gi, '@')
+
 // ─── Bloque de estilos: claro por defecto, oscuro si el cliente lo soporta ───
 const STYLE_BLOCK = `
   <style>
@@ -57,9 +68,14 @@ export const buildNotificationHtml = (name, email, message) => {
   })
 
   const [projectLine, ...rest] = message.split('\n\n')
-  const hasType = projectLine.startsWith('Tipo de proyecto:')
-  const projectType = hasType ? projectLine.replace('Tipo de proyecto:', '').trim() : null
+  const hasType = projectLine.startsWith('Tipo de mensaje:')
+  const projectType = hasType ? projectLine.replace('Tipo de mensaje:', '').trim() : null
   const body = hasType ? rest.join('\n\n') : message
+  const safeName = escapeHtml(name)
+  const safeEmail = escapeHtml(email)
+  const emailHref = safeMailto(email)
+  const safeProjectType = escapeHtml(projectType)
+  const safeBody = escapeHtml(body)
 
   return `<!DOCTYPE html>
 <html lang="es">
@@ -95,16 +111,16 @@ export const buildNotificationHtml = (name, email, message) => {
       <table width="100%" cellpadding="0" cellspacing="0"><tr>
         <td width="60" style="vertical-align:top;padding-right:18px;">
           <div style="width:56px;height:56px;background:linear-gradient(135deg,#FC8F54,#F5525B);border-radius:16px;text-align:center;line-height:56px;font-size:24px;font-weight:800;color:#fff;">
-            ${name.charAt(0).toUpperCase()}
+            ${escapeHtml(name.charAt(0).toUpperCase())}
           </div>
         </td>
         <td style="vertical-align:top;">
           <p class="text-3" style="margin:0 0 3px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b86a0;">De</p>
-          <p class="text-1" style="margin:0 0 5px;font-size:20px;font-weight:700;color:#171426;letter-spacing:-0.3px;">${name}</p>
-          <a href="mailto:${email}" style="font-size:13px;color:#e8672f;text-decoration:none;font-family:monospace;">${email}</a>
+          <p class="text-1" style="margin:0 0 5px;font-size:20px;font-weight:700;color:#171426;letter-spacing:-0.3px;">${safeName}</p>
+          <a href="mailto:${emailHref}" style="font-size:13px;color:#e8672f;text-decoration:none;font-family:monospace;">${safeEmail}</a>
           ${projectType ? `
           <div class="badge" style="display:inline-block;margin-top:10px;padding:4px 10px;background:#fdeee3;border:1px solid #fbd9bd;border-radius:20px;">
-            <span style="font-size:11px;font-weight:700;color:#c8622a;">${projectType}</span>
+            <span style="font-size:11px;font-weight:700;color:#c8622a;">${safeProjectType}</span>
           </div>` : ''}
         </td>
         <td style="vertical-align:top;text-align:right;">
@@ -117,9 +133,9 @@ export const buildNotificationHtml = (name, email, message) => {
     <tr><td style="padding:32px 40px 40px;">
       <p class="text-3" style="margin:0 0 14px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#8b86a0;">Mensaje</p>
       <div class="msgbox" style="background:#f9f7ff;border:1px solid #ece7fb;border-left:3px solid #FC8F54;border-radius:0 14px 14px 0;padding:22px 26px;margin-bottom:32px;">
-        <p class="text-2" style="margin:0;font-size:15px;color:#4c4760;line-height:1.85;white-space:pre-wrap;">${body}</p>
+        <p class="text-2" style="margin:0;font-size:15px;color:#4c4760;line-height:1.85;white-space:pre-wrap;">${safeBody}</p>
       </div>
-      <a href="mailto:${email}?subject=Re%3A%20Tu%20mensaje%20en%20mi%20portafolio"
+      <a href="mailto:${emailHref}?subject=Re%3A%20Tu%20mensaje%20en%20mi%20portafolio"
          style="display:inline-block;padding:14px 28px;background:linear-gradient(90deg,#FC8F54,#F5525B);color:#fff;font-size:14px;font-weight:700;text-decoration:none;border-radius:10px;letter-spacing:0.2px;">
         Responder ahora &rarr;
       </a>
@@ -176,7 +192,7 @@ export const buildConfirmationHtml = (name) => `<!DOCTYPE html>
     <tr><td class="divider" style="padding:48px 40px 36px;border-bottom:1px solid #e9e5f4;text-align:center;">
       <div style="width:68px;height:68px;background:linear-gradient(135deg,#FC8F54,#F5525B);border-radius:50%;text-align:center;line-height:68px;font-size:30px;margin:0 auto 28px;color:#fff;">&#10003;</div>
       <h1 class="text-1" style="margin:0 0 16px;font-size:30px;font-weight:800;color:#171426;letter-spacing:-0.5px;line-height:1.2;">
-        ¡Gracias por escribirme,<br/>${name}!
+        ¡Gracias por escribirme,<br/>${escapeHtml(name)}!
       </h1>
       <p class="text-2" style="margin:0 auto;font-size:16px;color:#4c4760;line-height:1.75;max-width:380px;">
         Recibí tu mensaje y lo revisaré pronto.<br/>

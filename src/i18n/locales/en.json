@@ -20,13 +20,16 @@
     "lang": {
         "label": "Language"
     },
+    "marquee": {
+        "aria": "Technologies I work with"
+    },
     "status": {
         "implemented": "Implemented",
         "inDevelopment": "In development"
     },
     "hero": {
         "eyebrow": "Full Stack Developer · Peru",
-        "tagline": "I build software end to end: interface, API and data. Right now I'm exploring computer vision and cloud architecture.",
+        "tagline": "I build the whole system: interface, API and data. Right now I'm exploring computer vision and cloud architecture.",
         "ctaProject": "See RetailVision",
         "ctaAbout": "About me",
         "scroll": "Explore",
@@ -40,14 +43,14 @@
         }
     },
     "manifesto": {
-        "eyebrow": "Manifesto",
+        "eyebrow": "01 — brand",
         "title": "Expert in nothing.",
         "p1": "Technology changes faster than anyone can master it.",
         "p2": "So I don't pretend to know it all: I protect my curiosity and adapt.",
         "p3": "Every project is an excuse to learn something new and build a better solution."
     },
     "star": {
-        "eyebrow": "Star project · Thesis · 2026",
+        "eyebrow": "02 — Star project · 2026",
         "problemLabel": "Problem",
         "problem": "A business doesn't know precisely how people move inside its store.",
         "solutionLabel": "Solution",
@@ -57,14 +60,14 @@
         "shotAlt": "RetailVision Analytics monitoring dashboard with camera feed, real-time KPIs, zone distribution and heat map."
     },
     "worlds": {
-        "eyebrow": "Beyond the star project",
+        "eyebrow": "03 — Beyond the star project",
         "title": "Other worlds",
         "all": "See all projects",
         "alfapet": "Clinical management for a veterinary clinic: patients, appointments, history, inventory and sales, with role-based permissions and an RLS-protected database.",
         "educore": "Academic management for schools: enrollment, attendance, grades and report cards, built with PHP and PostgreSQL."
     },
     "cta": {
-        "eyebrow": "Contact",
+        "eyebrow": "04 — Contact",
         "title": "Let's talk",
         "text": "If something you saw interests you, let's chat."
     },

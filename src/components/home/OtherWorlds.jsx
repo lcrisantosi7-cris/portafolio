@@ -34,7 +34,7 @@ export default function OtherWorlds() {
                         </p>
                         <h2
                             id="worlds-title"
-                            data-reveal
+                            data-reveal="mask"
                             className="mt-4 font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(3rem,7vw,6rem)]"
                         >
                             {t('worlds.title')}

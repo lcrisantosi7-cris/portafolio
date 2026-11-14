@@ -20,13 +20,16 @@
     "lang": {
         "label": "Idioma"
     },
+    "marquee": {
+        "aria": "Tecnologías con las que trabajo"
+    },
     "status": {
         "implemented": "Implementado",
         "inDevelopment": "En desarrollo"
     },
     "hero": {
         "eyebrow": "Full Stack Developer · Perú",
-        "tagline": "Construyo software de punta a punta: interfaz, API y datos. Hoy exploro visión por computadora y arquitectura en la nube.",
+        "tagline": "Construyo el sistema completo: interfaz, API y datos. Hoy exploro visión por computadora y arquitectura en la nube.",
         "ctaProject": "Ver RetailVision",
         "ctaAbout": "Conóceme",
         "scroll": "Explora",
@@ -40,14 +43,14 @@
         }
     },
     "manifesto": {
-        "eyebrow": "Manifiesto",
+        "eyebrow": "01 — Marca",
         "title": "Experto en nada.",
         "p1": "La tecnología cambia más rápido de lo que alguien puede dominarla.",
         "p2": "Por eso no presumo de saberlo todo: cuido la curiosidad y me adapto.",
         "p3": "Cada proyecto es una excusa para aprender algo nuevo y construir una solución mejor."
     },
     "star": {
-        "eyebrow": "Proyecto estrella · Tesis · 2026",
+        "eyebrow": "02 — Proyecto estrella · 2026",
         "problemLabel": "Problema",
         "problem": "Un negocio no sabe con precisión por dónde se mueve la gente dentro de su local.",
         "solutionLabel": "Solución",
@@ -57,14 +60,14 @@
         "shotAlt": "Panel de monitoreo de RetailVision Analytics con feed de cámara, KPIs en tiempo real, distribución por zonas y mapa de calor."
     },
     "worlds": {
-        "eyebrow": "Más allá del proyecto estrella",
+        "eyebrow": "03 — Más allá del proyecto estrella",
         "title": "Otros mundos",
         "all": "Ver todos los proyectos",
         "alfapet": "Gestión clínica para una veterinaria: pacientes, citas, historial, inventario y ventas, con permisos por rol y base de datos protegida con RLS.",
         "educore": "Gestión académica para colegios: matrículas, asistencia, calificaciones y boletas de notas, con PHP y PostgreSQL."
     },
     "cta": {
-        "eyebrow": "Contacto",
+        "eyebrow": "04 — Contacto",
         "title": "Hablemos",
         "text": "Si algo de lo que viste te interesa, conversemos."
     },

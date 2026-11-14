@@ -63,9 +63,11 @@ export function TransitionProvider({ children }) {
             <div
                 ref={overlayRef}
                 aria-hidden="true"
-                className="pointer-events-none fixed inset-0 z-[100] bg-navy-900"
+                className="pointer-events-none fixed inset-0 z-[100] bg-void-950"
                 style={{ visibility: 'hidden' }}
-            />
+            >
+                <div className="absolute inset-x-0 top-0 h-0.5 bg-flame-500 shadow-[0_0_28px_6px_rgba(255,106,19,0.55)]" />
+            </div>
         </TransitionContext.Provider>
     )
 }

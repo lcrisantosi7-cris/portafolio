@@ -62,7 +62,7 @@ export default function StarProject() {
                     </p>
                     <h2
                         id="star-title"
-                        data-reveal
+                        data-reveal="mask"
                         className="mt-4 font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(3.2rem,8vw,7.5rem)]"
                     >
                         RetailVision

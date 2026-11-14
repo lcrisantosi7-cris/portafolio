@@ -21,7 +21,7 @@ export default function ContactCta() {
             </p>
             <h2
                 id="cta-title"
-                data-reveal
+                data-reveal="mask"
                 className="mx-auto mt-6 font-display font-condensed font-extrabold uppercase leading-[0.9] text-cream-100 text-[length:clamp(3.5rem,13vw,11rem)]"
             >
                 {t('cta.title')}

@@ -51,13 +51,13 @@ export const projects = [
     {
         slug: 'plantmilk',
         name: 'PlantMilk',
-        year: null, // por verificar
+        year: 2026, // por verificar
         tier: 'secondary',
-        status: null, // por verificar
+        status: STATUS.IN_DEVELOPMENT, // por verificar
         caseStudy: false,
         stack: [], // por verificar con el repositorio
         repoUrl: 'https://github.com/lcrisantosi7-cris/plantmilk',
-        deployUrl: null,
+        deployUrl: 'https://plantmilk.lovable.app',
     },
     {
         slug: 'winterbeauty',

@@ -53,11 +53,12 @@ export default function Header() {
     }, [])
 
     // Al cambiar de página: cerrar menú y volver a mostrar el header
-    useEffect(() => {
+    const [lastPath, setLastPath] = useState(pathname)
+    if (lastPath !== pathname) {
+        setLastPath(pathname)
         setOpen(false)
         setHidden(false)
-    }, [pathname])
-
+    }
     // Menú móvil: bloquear scroll, foco, Escape y trampa de foco
     useEffect(() => {
         openRef.current = open
@@ -127,8 +128,8 @@ export default function Header() {
             >
                 <div
                     className={`mx-auto flex max-w-6xl items-center justify-between gap-3 rounded-full py-2 pl-4 pr-2 ring-1 backdrop-blur-xl transition-[background-color,box-shadow] duration-500 ${scrolled || open
-                            ? 'bg-navy-950/75 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.7)] ring-white/15'
-                            : 'bg-white/[0.03] ring-white/10'
+                        ? 'bg-navy-950/75 shadow-[0_10px_40px_-12px_rgba(0,0,0,0.7)] ring-white/15'
+                        : 'bg-white/[0.03] ring-white/10'
                         }`}
                 >
                     <TransitionLink to="/" aria-label={t('nav.homeAria')} className="flex items-center gap-2.5">
